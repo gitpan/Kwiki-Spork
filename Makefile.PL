@@ -8,7 +8,7 @@ version_from('lib/Kwiki/Spork.pm');
 
 requires(qw(
     perl 5.6.1
-    Kwiki 0.31
+    Kwiki 0.37
     Spork 0.18
 ));
 

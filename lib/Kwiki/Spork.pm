@@ -1,12 +1,9 @@
 package Kwiki::Spork;
-use strict;
-use warnings;
-use Kwiki::Plugin '-Base';
-use Kwiki::Installer '-Base';
-our $VERSION = '0.10';
+use Kwiki::Plugin -Base;
+use Kwiki::Installer -Base;
+our $VERSION = '0.11';
 
 const class_id => 'spork';
-const class_title => 'Spork';
 
 sub register {
     my $registry = shift;
@@ -56,7 +53,7 @@ sub make_spork {
 
 sub spork_command {
     local $main::HUB; #XXX tt2 hack
-    Spork->new->load_hub->load_class('command');
+    Spork->new->load_hub->command;
 }
 
 sub render {
@@ -82,7 +79,6 @@ sub require_spork {
 }
 
 package Kwiki::Spork;
-1;
 __DATA__
 
 =head1 NAME 
